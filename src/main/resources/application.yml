@@ -1,0 +1,32 @@
+spring:
+  application:
+    name:
+      LunchMatch
+    security:
+      #jwt:
+       # secret:
+        #  yJh5v7Jj8QxM2Bv5FfXxg+wzBczl0epDlMqNl5Gn4w76sKKhQFekM0VGl9uPjXBw
+        #expiration:
+         # 900000
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/lunch_match
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    show-sql: true
+server:
+  servlet:
+    context-path: /api/v1/
+  port: 8080
+
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
